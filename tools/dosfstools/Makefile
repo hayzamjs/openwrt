@@ -9,12 +9,11 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=dosfstools
 PKG_CPE_ID:=cpe:/a:dosfstools_project:dosfstools
-PKG_VERSION:=4.2
+PKG_VERSION:=4.3
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://github.com/dosfstools/dosfstools/releases/download/v$(PKG_VERSION)/ \
-		http://fossies.org/linux/misc
-PKG_HASH:=64926eebf90092dca21b14259a5301b7b98e7b1943e8a201c7d726084809b527
+PKG_SOURCE_URL:=https://github.com/hayzamjs/dosfstools/releases/download/$(PKG_VERSION)/
+PKG_HASH:=9234c94acb09e075bee7ff85e95c40e4d039c4648e04a143601d9f1ea65bc1ec
 
 HOST_FIXUP:=autoreconf
 

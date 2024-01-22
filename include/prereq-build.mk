@@ -150,6 +150,7 @@ $(eval $(call SetupHostCommand,getopt, \
 	gnugetopt -o t --long test -- --test | grep '^ *--test *--', \
 	getopt -o t --long test -- --test | grep '^ *--test *--', \
 	/usr/local/opt/gnu-getopt/bin/getopt -o t --long test -- --test | grep '^ *--test *--', \
+	/usr/local/bin/getopt -o t --long test -- --test | grep '^ *--test *--', \
 	/opt/local/bin/getopt -o t --long test -- --test | grep '^ *--test *--'))
 
 $(eval $(call SetupHostCommand,realpath,Please install a 'realpath' utility, \
