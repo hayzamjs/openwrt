@@ -22,7 +22,7 @@ include $(INCLUDE_DIR)/host-build.mk
 
 define Host/Configure
 	$(MAKE) -C $(HOST_BUILD_DIR) \
-		HOSTCFLAGS="$(HOST_CFLAGS)" \
+		HOSTCFLAGS="$(HOST_CFLAGS) -isystem /usr/include" \
 		HOSTLDFLAGS="$(HOST_LDFLAGS)" \
 		PKG_CONFIG_EXTRAARGS="--static" \
 		V=$(if $(findstring c,$(OPENWRT_VERBOSE)),1) \
@@ -33,7 +33,7 @@ endef
 
 define Host/Compile
 	$(MAKE) -C $(HOST_BUILD_DIR) \
-		HOSTCFLAGS="$(HOST_CFLAGS)" \
+		HOSTCFLAGS="$(HOST_CFLAGS) -isystem /usr/include" \
 		HOSTLDFLAGS="$(HOST_LDFLAGS)" \
 		PKG_CONFIG_EXTRAARGS="--static" \
 		V=$(if $(findstring c,$(OPENWRT_VERBOSE)),1) \
